@@ -1,7 +1,7 @@
 console.log('connected')
 
 document.addEventListener("DOMContentLoaded", () => {
-    fetch('http://localhost:3000')
+    fetch('http://localhost:3000/plants')
     .then(res => res.json())
-    return "yes"
+    return console.log("yay")
 })

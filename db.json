@@ -1,21 +1,22 @@
 {
-  "Pothos": [
+  "plants": [
     {
       "id": 1,
+      "Name": "Pothos",
       "Watering days": 4,
       "Information": "Hard to kill"
-    }
-  ],
-  "English Ivy": [
+    },
     {
       "id": 2,
+      "Name":"English Ivy",
       "Watering days": 6,
       "Information": "Hard to kill"
+    },
+    {
+      "id": 3,
+      "Name": "Snake Plant",
+      "Watering days": 5,
+      "Information": "Hard to kill"
     }
-  ],
-  "Snake Plant": {
-    "id": 3,
-    "Watering days": 5,
-    "Information": "Hard to kill"
-  }
+  ]
 }
