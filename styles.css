@@ -1,3 +1,7 @@
 body{
-    background-color: lemonchiffon;
+    background-color: lightcyan;
+}
+section.search-form{
+    border-style: solid;
+    border-color: lightblue;
 }

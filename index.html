@@ -1,27 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Phase 1 Project</title>
+    <meta 
+        charset="UTF-8"
+    >
+    <meta 
+        name="viewport" 
+        content="width=device-width, 
+        initial-scale=1.0"
+    > 
+    <img 
+        src="#" 
+        alt="some img"
+    >
+    <title>     Watering Plants     </title>
 
     <!-- Css reset: sindresorhus/modern-normalize-->
     <link 
-        rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css" 
+        rel="stylesheet" 
+        href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css" 
         integrity="sha512-4xo8blKMVCiXpTaLzQSLSw3KFOVPWhm/TRtuPVc4WG6kUgjH6J03IBuG7JZPkcWMxJ5huwaBpOpnwYElP/m6wg==" 
         crossorigin="anonymous" 
         referrerpolicy="no-referrer" />
     
     <!-- custom css-->   
-    <link rel="stylesheet" href="styles.css">
+    <link 
+        rel="stylesheet" 
+        href="styles.css"
+    >
 
     <!--custom javascript-->
-    <script defer src="main.js"></script>
+    <script defer src="main.js">    </script>
 </head>
 <body>
     <!-- header begins -->
     <header id="top">
-        <h1> Phase 1 Project</h1>
+        <h1>    Watering Plants     </h1>
         <nav>
             <ul>
                 <li>
@@ -41,62 +55,128 @@
     <!--main begins-->
     <main>
         <section class="search-form">
-            <h2> Form Section</h2>
-            <form action="GET" id="meal-form">
-                <label for="search-terms">Search term: </label>
-                <input type="text" name="search-terms" id="search-terms" 
-                placeholder="input search term" required />
+            <h2> Enter Plants information</h2>
+        
+            <!-- make a box around this section and enter plants information-->
+            
+            <form action="GET" id="plant-form">
                 
-                <br />
+                <label for="search-terms1">Plant Name: </label>
+                <input 
+                    type="text" 
+                    name="search-terms1" 
+                    id="search-terms1" 
+                    placeholder="name" 
+                    required 
+                />
+                
+                <!-- Plant Api info will fill out the rest of the info if pressed -->
 
-                <label for="catergory-filter">Category filter:</label>
-                <select name="category" id="catergory-filter" required>
+                <label for="plantApiInfo">      or   </label>
+                <select     name="plantApiInfo"      id="plantApiInfo"   required>
+
                     <option value="option 1">option 1</option>
                     <option value="option 2">option 2</option>
                     <option value="option 3">option 3</option>
+
                 </select>
 
-                <input type="submit" value="Search">
+                <br/>
+                <br/>
 
+                <!-- Information section of box-->
+
+                <label for="search-terms2">     Information:    </label>
+                <input 
+                    type="text" 
+                    name="search-terms2" 
+                    id="search-terms2" 
+                    placeholder="Info" 
+                    required 
+                />
+
+                <br/>
+                <br/>
+
+                <!-- how frequent they should water it-->
+
+                <label for="plantNumberInfo"> How frequent do you want to be reminded </label>
+                <select     name="plantNumberInfo"      id="plantNumberInfo"     required>
+
+                    <option value="1">  1   </option>
+                    <option value="2">  2   </option>
+                    <option value="3">  3   </option>
+
+                </select>
+
+                <br/>
+                <br/>
+
+                <!-- Enter Date -->
+
+                <label for="search-terms4">     Last Time Watered:   </label>
+                <input 
+                    type="text" 
+                    name="search-terms4" 
+                    id="search-terms4" 
+                    placeholder="XX-XX-XXXX" 
+                    required 
+                />
+
+                <br/>
+                <br/>
+                
             </form>
+            <!-- Box should end here-->
+
+
         </section>
+
         <section id="section1">
+
             <h2> Section 1</h2>
-            <img src="#" alt="some img">
+            <img 
+                src="#" 
+                alt="some img"
+            >
             <p> 
-                Random information that could 
-                be a paragraph if i want that 
-                blah blah blah. Filling some 
-                space :)
+                blah blah blah.
             </p>
         </section>
+
         <section id="section2">
+
             <h2> Section 2</h2>
-            <img src="#" alt="some img">
+            <img 
+                src="#" 
+                alt="some img"
+            >
             <p> 
-                Random information that could 
-                be a paragraph if i want that 
-                blah blah blah. Filling some 
+                Filling some 
                 space :)
             </p>
         </section>
+
         <section id="section3">
+
             <h2> Section 3</h2>
-            <img src="#" alt="some img">
+            <img 
+                src="#" 
+                alt="some img"
+            >
             <p> 
-                Random information that could 
-                be a paragraph if i want that 
-                blah blah blah. Filling some 
-                space :)
+                Random information 
             </p>
         </section>
+
     </main>
     <!--main ends-->
 
     <!--footer begins-->
     <footer>
-        <p>Copyright Jocelyn Vargas 2023</p>
-        <a href="#top"> Back to top</a>
+        <p>     Copyright Jocelyn Vargas 2023       </p>
+
+        <a href="#top">      Back to top       </a>
     </footer>
     <!--footer ends-->
     

@@ -1,7 +1,7 @@
 console.log('connected')
 
-const handleFormInputFocus = () => {
-    console.log('focus occured')
-}
-const searchTermsInput = document.body.querySelector('#search-terms')
-searchTermsInput.addEventListener('focus', handleFormInputFocus)
+document.addEventListener("DOMContentLoaded", () => {
+    fetch('http://localhost:3000')
+    .then(res => res.json())
+    return "yes"
+})
