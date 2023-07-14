@@ -1,22 +1,26 @@
 {
-  "plants": [
+  "Plants": [
     {
       "id": 1,
-      "Name": "Pothos",
-      "Watering days": 4,
-      "Information": "Hard to kill"
+      "name": "Pothos",
+      "days": 4,
+      "date": "xx-xx-xxxx",
+      "img": "https://plantcareforbeginners.gumlet.io/images/articles/golden-pothos-in-bright-living-room.png?w=1200",
+      "info": "Hard to kill"
     },
     {
       "id": 2,
-      "Name":"English Ivy",
-      "Watering days": 6,
-      "Information": "Hard to kill"
+      "name":"English Ivy",
+      "days": 6,
+      "img": "https://assets.eflorist.com/site/48185077/assets/products/PHR_/sku10651710.jpg" ,
+      "info": "Hard to kill"
     },
     {
       "id": 3,
-      "Name": "Snake Plant",
-      "Watering days": 5,
-      "Information": "Hard to kill"
+      "name": "Snake Plant",
+      "days": 5,
+      "img": "https://cb.scene7.com/is/image/Crate/SnakePlantInPotSHS18/$web_pdp_main_carousel_med$/220913134532/snake-plant-in-pot.jpg" ,
+      "info": "Hard to kill"
     }
   ]
 }

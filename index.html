@@ -9,10 +9,6 @@
             content="width=device-width, 
             initial-scale=1.0"
         > 
-        <img 
-            src="#" 
-            alt="some img"
-        >
         <title>     Watering Plants     </title>
 
         <!-- Css reset: sindresorhus/modern-normalize-->
@@ -34,13 +30,21 @@
         <script defer src="main.js">    </script>
     </head>
     <body>
+        <!-- photo fill all of background maybe not put in the right area-->
+        <!-- <div class = "fill">
+            <img 
+                src=
+                alt = "Add a background photo"
+            /> -->
+        <!-- </div> -->
+        
         <!-- header begins -->
         <header id="top">
             <h1>    Watering Plants     </h1>
             <nav>
                 <ul>
                     <li>
-                        <a href="#section1">Section 1</a>
+                        <a href="#plantList">Plant list</a>
                     </li>
                     <li>
                         <a href="#section2">Section 2</a>
@@ -61,26 +65,28 @@
                 <!-- make a box around this section and enter plants information-->
                 
                 <form action="GET" id="plant-form">
+                    <label for="input-text">Plant Name: </label>
                     
-                    <label for="search-terms1">Plant Name: </label>
-                    <input 
-                        type="text" 
-                        name="search-terms1" 
-                        id="search-terms1" 
-                        placeholder="name" 
-                        required 
+                    <input
+                        type = "text"
+                        name = "name"
+                        value=""
+                        placeholder="Enter Plants Name"
+                        id ="input-text"
+                        required
                     />
+                    
                     
                     <!-- Plant Api info will fill out the rest of the info if pressed -->
 
-                    <label for="plantApiInfo">      or   </label>
+                    <!-- <label for="plantApiInfo">      or   </label>
                     <select     name="plantApiInfo"      id="plantApiInfo"   required>
 
                         <option value="option 1">option 1</option>
                         <option value="option 2">option 2</option>
                         <option value="option 3">option 3</option>
 
-                    </select>
+                    </select> -->
 
                     <br/>
                     <br/>
@@ -124,6 +130,14 @@
                         required 
                     />
 
+                    
+
+                    <br/>
+                    <br/>
+                    <input
+                    type = "submit"
+                    value = "Add Plant"
+                    />
                     <br/>
                     <br/>
                     
@@ -133,17 +147,13 @@
 
             </section>
 
-            <section id="section1">
+            <section id="plantList">
 
-                <h2> Section 1</h2>
-                <img 
-                    src="#" 
-                    alt="some img"
-                >
-                <p> 
-                    blah blah blah.
-                </p>
+                <h2> Plant List </h2>
+
             </section>
+
+            <!-- the list is added here -->
 
             <section id="section2">
 
