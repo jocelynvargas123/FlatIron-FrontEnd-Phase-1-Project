@@ -9,7 +9,15 @@
             content="width=device-width, 
             initial-scale=1.0"
         > 
-        <title>     Watering Plants     </title>
+        <title>     Water Your Plants     </title>
+
+        
+
+        <div class="container">
+            <h1 id = "current-time">xx-xx-xxxx</h1>
+            <img src = "https://flexonhose.com/wp-content/uploads/2018/01/Flexon-Lawn-and-Garden-Performance-Hoses-banner.jpg" >
+            </div>
+        </div>
 
         <!-- Css reset: sindresorhus/modern-normalize-->
         <link 
@@ -20,16 +28,20 @@
             referrerpolicy="no-referrer" 
         />
         
+
         <!-- custom css-->   
         <link 
             rel="stylesheet" 
             href="styles.css"
         >
 
+
         <!--custom javascript-->
         <script defer src="main.js">    </script>
     </head>
     <body>
+
+
         <!-- photo fill all of background maybe not put in the right area-->
         <!-- <div class = "fill">
             <img 
@@ -38,106 +50,94 @@
             /> -->
         <!-- </div> -->
         
+
         <!-- header begins -->
         <header id="top">
-            <h1>    Watering Plants     </h1>
+            <h1>    Water Your Plants     </h1>
             <nav>
-                <ul>
-                    <li>
-                        <a href="#plantList">Plant list</a>
-                    </li>
-                    <li>
-                        <a href="#section2">Section 2</a>
-                    </li>
-                    <li>
-                        <a href="#section3">Section 3</a>
-                    </li>
-                </ul>
+                <a href="#plantList">Plant list</a>
+                <a href="#section2">Tips</a>
+                <a href="#section3">Gallery</a>
+               
             </nav>
         </header>
         <!-- header ends-->
-        
+        <br/>
+
         <!--main begins-->
         <main>
             <section class="search-form">
                 <h2> Enter Plants information</h2>
             
+
                 <!-- make a box around this section and enter plants information-->
                 
-                <form action="GET" id="plant-form">
-                    <label for="input-text">Plant Name: </label>
+                <form class ="plant-form">
+                    <label for="name">Plant Name: </label>
                     
                     <input
+                        id = "name"
                         type = "text"
                         name = "name"
                         value=""
                         placeholder="Enter Plants Name"
-                        id ="input-text"
+                        class ="input-text"
                         required
+                        
                     />
                     
-                    
-                    <!-- Plant Api info will fill out the rest of the info if pressed -->
+                    <br/>
+                    <br/>
 
-                    <!-- <label for="plantApiInfo">      or   </label>
-                    <select     name="plantApiInfo"      id="plantApiInfo"   required>
-
-                        <option value="option 1">option 1</option>
-                        <option value="option 2">option 2</option>
-                        <option value="option 3">option 3</option>
-
-                    </select> -->
+                    <label for="img"> Enter Image: </label>
+                    <input
+                    id ="img"
+                    type="text"
+                    name="img"
+                    value=""
+                    placeholder="Enter a plant image URL"
+                    class="input-text"
+                    /> 
 
                     <br/>
                     <br/>
+
 
                     <!-- Information section of box-->
 
-                    <label for="search-terms2">     Information:    </label>
+                    <label for="info">     Information:    </label>
                     <input 
+                        id = "info"
                         type="text" 
-                        name="search-terms2" 
-                        id="search-terms2" 
+                        name="info" 
+                        class="input-text" 
                         placeholder="Info" 
-                        required 
                     />
 
                     <br/>
                     <br/>
 
+
                     <!-- how frequent they should water it-->
 
-                    <label for="plantNumberInfo"> How frequent do you want to be reminded </label>
-                    <select     name="plantNumberInfo"      id="plantNumberInfo"     required>
+                    <label for="days"> How frequent do you want to be reminded </label>
+                    <select     name="days"   type="number"   id="days"     required>
 
-                        <option value="1">  1   </option>
-                        <option value="2">  2   </option>
-                        <option value="3">  3   </option>
+                        <option value= 1>  Every day           </option>
+                        <option value= 2>  Every other day     </option>
+                        <option value= 3 >  Every 3 days        </option>
+                        <option value= 4 >  Every 4 days        </option>
+                        <option value= 5 >  Every 5 days        </option>
+                        <option value= 6 >  Every 6 days        </option>
+                        <option value= 7 >  Once a week         </option>
 
                     </select>
 
                     <br/>
                     <br/>
-
-                    <!-- Enter Date -->
-
-                    <label for="search-terms4">     Last Time Watered:   </label>
-                    <input 
-                        type="text" 
-                        name="search-terms4" 
-                        id="search-terms4" 
-                        placeholder="XX-XX-XXXX" 
-                        required 
-                    />
-
-                    
-
-                    <br/>
-                    <br/>
-                    <input
-                    type = "submit"
-                    value = "Add Plant"
-                    />
+                    <button id = "addPlant" >
+                        Add Plant
+                    </button>
                     <br/>
                     <br/>
                     
@@ -150,10 +150,12 @@
             <section id="plantList">
 
                 <h2> Plant List </h2>
-
+                <!-- Plant list is added here -->
             </section>
 
-            <!-- the list is added here -->
+
+                <!-- Plant list ends here-->
+
 
             <section id="section2">
 
@@ -181,7 +183,11 @@
             </section>
 
         </main>
+
+
         <!--main ends-->
+
+
 
         <!--footer begins-->
         <footer>
