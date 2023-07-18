@@ -1,21 +1,76 @@
 body{
-    background-color: rgb(217, 254, 227);
+    background-color: #e0fbfc;
 }
-section.search-form{
+
+.container{
+    width: 100%;
+    height: 100%;
+    background-color: #3d5a80;
+    display: flex;
+    align-items:center ;
+    justify-content: center;
+    position: relative;
+}
+
+.container img{
+    width: 100%;
+    padding-top: 20pt;
+}
+
+.container h1 {
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%,-50%);
+    color: #fff;
+    font-size: 20px;
+    font-weight: 900;
+    letter-spacing: 3px;
+    background-color: #3d5a80;
+}
+
+#top h1{
+    font-size: 50pt;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #4b6d9a;
+}
+
+#top{
+    background-color: #ffffffc1;
+    text-align: center;
+    text-decoration: none;
+}
+
+#top a{ 
+    
+    position: relative;
+    font-size: 30pt;
+    font-weight: 700;
+    color: #3d5a80;
+    padding: 0px 40px;
+    text-decoration: none;
+}
+
+.search-form{
     
     border-style: solid;
-    border-color: lightblue;
+    border-width: 10pt;
+    padding-left: 10pt;
+    border-color: #98c1d9;
+    background-color : #98c1d96e; 
 }
+
 
 h2{
     font-size: 24pt;
     font-family: Arial, Helvetica, sans-serif;
 
 }
-img{
+.plantCard img{
     width: 200px;
     height: 200px;
-    padding: 0 20px 20px 0;;
+
 }
 h3{
     
@@ -28,20 +83,15 @@ h3{
     display: inline-block ;
     width: 20rem;
     margin: 10px;
-    background-color: rgba(125, 243, 229, 0.437);
+    background-color: #3d5a80;
     padding: 1rem;
     border-style: inset;
-    border-color: rgba(59, 123, 59, 0.815);
+    border-color: #3d5a80;
     text-align: center;
+    
 
 }
-button{
-   
-    background-color: rgb(242, 242, 170);
-    border-radius: 1;
-    border-color: black;
 
-}
 button{
    
     background-color: rgb(242, 242, 170);
