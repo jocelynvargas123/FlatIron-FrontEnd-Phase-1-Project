@@ -18,8 +18,8 @@ let year = date.getFullYear();
 let currentDate = `${month}-${day}-${year}`;
 console.log(currentDate)
 
-let time = document.getElementById("current-time")
-            time.textContent = currentDate
+// let time = document.getElementById("current-time")
+//             time.textContent = currentDate
 
             
 // create new plant card
@@ -37,11 +37,9 @@ const addPlantButton = document.querySelector('#addPlant')
 // function that creates countdown for the days til zero 
 
 function countDown(){
-  let plantCardAmount = document.getElementsByClassName('watering')
-  for(let x = plantCardAmount.length; x > 0; x--){
-     let numberOfDays = document.getElementById(`${x}`) 
-     console.log(numberOfDays)
-    }
+let plantCardList = document.getElementsByClassName('plantCard')
+    
+  console.log(plantCardList.days)
 }
 
 
@@ -65,17 +63,23 @@ function createPlantCard(plant){
         let p2 = document.createElement('p')
         p2.textContent = plant.date
 
+        let p3 = document.createElement('p')
+            p3.textContent = plant.days
+            p3.classList = "hidden"
+
+        let span = document.createElement('span')
         let btn = document.createElement('button')
+        btn.append(span)
         btn.classList.add('watering')
         btn.id = plant.id
         btn.value = plant.days
-        btn.textContent =  plant.days
+        btn.textContent =  `Watering in ${plant.days} Days`
         btn.addEventListener('click', () => {
           p2.textContent = currentDate
           patchPlants(btn.id)
         })
         
-    card.append(h3,img,p,p2,btn)
+    card.append(h3,img,p,p2,p3,btn)
     document.getElementById('plantList').appendChild(card)
 }
 
