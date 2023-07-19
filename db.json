@@ -3,7 +3,7 @@
     {
       "name": "Pothos",
       "days": 4,
-      "date": "7-16-2023",
+      "date": "7-19-2023",
       "img": "https://plantcareforbeginners.gumlet.io/images/articles/golden-pothos-in-bright-living-room.png?w=1200",
       "info": "Hard to kill",
       "id": 1
@@ -11,7 +11,7 @@
     {
       "name": "English Ivy",
       "days": 6,
-      "date": "7-18-2023",
+      "date": "7-19-2023",
       "img": "https://assets.eflorist.com/site/48185077/assets/products/PHR_/sku10651710.jpg",
       "info": "Hard to kill",
       "id": 2
@@ -30,7 +30,7 @@
       "info": "The plant who lived",
       "days": "3",
       "id": 4,
-      "date": "7-16-2023"
+      "date": "7-19-2023"
     }
   ]
 }
