@@ -38,8 +38,8 @@ const addPlantButton = document.querySelector('#addPlant')
 
 function countDown(){
 let plantCardList = document.getElementsByClassName('plantCard')
-    
-  console.log(plantCardList.days)
+  console.log(plantCardList)
+
 }
 
 
@@ -50,34 +50,32 @@ function createPlantCard(plant){
         card.classList.add('plantCard')
 
         let h3 = document.createElement('h3')
-        h3.textContent = `Plant name: ${plant.name} `
+            h3.textContent = `Plant name: ${plant.name} `
 
         let img = document.createElement('img')
-        img.src = plant.img
-        if(`${plant.img}` === "") { img.src = "https://i.pinimg.com/originals/3e/93/03/3e9303d2646cb2d84fbb763f7eedb409.jpg"}
-        img.classList.add('plant-photo')
+            img.src = plant.img
+            if(`${plant.img}` === "") { img.src = "https://i.pinimg.com/originals/3e/93/03/3e9303d2646cb2d84fbb763f7eedb409.jpg"}
+            img.classList.add('plant-photo')
 
         let p = document.createElement('p')
-        p.textContent = `Information: ${plant.info}`
+            p.textContent = `Information: ${plant.info}`
 
         let p2 = document.createElement('p')
-        p2.textContent = plant.date
+            p2.textContent = plant.date
 
         let p3 = document.createElement('p')
             p3.textContent = plant.days
             p3.classList = "hidden"
 
-        let span = document.createElement('span')
         let btn = document.createElement('button')
-        btn.append(span)
-        btn.classList.add('watering')
-        btn.id = plant.id
-        btn.value = plant.days
-        btn.textContent =  `Watering in ${plant.days} Days`
-        btn.addEventListener('click', () => {
-          p2.textContent = currentDate
-          patchPlants(btn.id)
-        })
+            btn.classList.add('watering')
+            btn.id = plant.id
+            btn.value = plant.days
+            btn.textContent =  plant.days
+          btn.addEventListener('click', () => {
+            p2.textContent = currentDate
+            patchPlants(btn.id)
+          })
         
     card.append(h3,img,p,p2,p3,btn)
     document.getElementById('plantList').appendChild(card)
