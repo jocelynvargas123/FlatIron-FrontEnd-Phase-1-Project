@@ -8,18 +8,36 @@ document.addEventListener("DOMContentLoaded", (event) => {
 })
 
 
+
+// the current time
+  function startTime() {
+    const today = new Date();
+    let h = today.getHours();
+    let m = today.getMinutes();
+    let s = today.getSeconds();
+    m = checkTime(m);
+    s = checkTime(s);
+    let time =  document.getElementById('time')
+    time.innerHTML =  h + ":" + m + ":" + s;
+    setTimeout(startTime, 1000);
+  }
+
+  function checkTime(i) {
+    if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+    return i;
+  }
+
+
 // getting the current date
-const date = new Date();
+  let date = new Date();
 
-let day = date.getDate();
-let month = date.getMonth() + 1;
-let year = date.getFullYear();
+  let day = date.getDate();
+  let month = date.getMonth() + 1;
+  let year = date.getFullYear();
 
-let currentDate = `${month}-${day}-${year}`;
-console.log(currentDate)
+  let currentDate = `${month}-${day}-${year}`;
+  console.log(currentDate)
 
-// let time = document.getElementById("current-time")
-//             time.textContent = currentDate
 
             
 // create new plant card
@@ -28,25 +46,11 @@ const addPlantButton = document.querySelector('#addPlant')
     createPlantCard()
 })
 
-// to keep track of the number of days button
-// should conect to button that update current date
-// count down max is value of How frequent do you want to be reminded
-// turn red when number is 0
-//doesnt return to default after refresh
-// counts down by day that passes
-// function that creates countdown for the days til zero 
-
-function countDown(){
-let plantCardList = document.getElementsByClassName('plantCard')
-  console.log(plantCardList)
-
-}
-
-
 
 // creates plant card to keep information from json//
 function createPlantCard(plant){
     let card = document.createElement('div')
+        card.id = "plantCard"
         card.classList.add('plantCard')
 
         let h3 = document.createElement('h3')
@@ -71,16 +75,20 @@ function createPlantCard(plant){
             btn.classList.add('watering')
             btn.id = plant.id
             btn.value = plant.days
-            btn.textContent =  plant.days
+            btn.textContent = plant.days
+            
           btn.addEventListener('click', () => {
             p2.textContent = currentDate
-            patchPlants(btn.id)
+            btn.textContent = p3.textContent
+            patchPlants(btn.id,plant.days)
           })
-        
+
     card.append(h3,img,p,p2,p3,btn)
     document.getElementById('plantList').appendChild(card)
 }
 
+let btn1 = document.getElementById("plantList").getElementsByClassName('plantCard')
+console.log(btn1)
 
 
 
@@ -107,7 +115,7 @@ function addNewPlant(Plants){
         Accept: "application/json"
       },
   
-      body: JSON.stringify({...Plants})
+      body: JSON.stringify({...Plants })
     })
     .then(res => res.json())
     .then(plants => createPlantCard(plants))
@@ -125,6 +133,7 @@ function patchPlants(id){
 
     body: JSON.stringify({
       date: currentDate
+      //patch days updating every 24 hours
     })
     
   })
