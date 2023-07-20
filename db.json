@@ -2,23 +2,23 @@
   "Plants": [
     {
       "name": "Pothos",
-      "days": 4,
-      "date": "7-19-2023",
+      "days": "4",
+      "date": "7-20-2023",
       "img": "https://plantcareforbeginners.gumlet.io/images/articles/golden-pothos-in-bright-living-room.png?w=1200",
       "info": "Hard to kill",
       "id": 1
     },
     {
       "name": "English Ivy",
-      "days": 6,
-      "date": "7-19-2023",
+      "days": "6",
+      "date": "7-20-2023",
       "img": "https://assets.eflorist.com/site/48185077/assets/products/PHR_/sku10651710.jpg",
       "info": "Hard to kill",
       "id": 2
     },
     {
       "name": "Snake Plant",
-      "days": 5,
+      "days": "5",
       "date": "7-19-2023",
       "img": "https://cb.scene7.com/is/image/Crate/SnakePlantInPotSHS18/$web_pdp_main_carousel_med$/220913134532/snake-plant-in-pot.jpg",
       "info": "Hard to kill",
