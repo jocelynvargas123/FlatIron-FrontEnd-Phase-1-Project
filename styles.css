@@ -14,7 +14,6 @@ body{
 }
 
 .container h2{
-    text-align: center;
     font-size: 20pt;
     color: rgb(255, 255, 255);
 }
@@ -27,13 +26,12 @@ body{
     list-style-type: none;
     margin: 0;
     padding: 0;
-    overflow: hidden;
     background-color: #20334a;
-
+    z-index: 2;
 }
+
 #top li{
     float: left;
-
 }
 
 #top li a{ 
@@ -48,7 +46,11 @@ body{
     background-color: #98c1d9;
   }
 
-.search-form{
+.search-form {
+
+    position: relative;
+    left: 15%;
+    width: 70%;
     border-style: solid;
     border-width: 10pt;
     padding-left: 20pt;
@@ -56,7 +58,6 @@ body{
     border-color: #98c1d9;
     background-color : #98c1d96e; 
 }
-
 
 .search-form h2 {
 
