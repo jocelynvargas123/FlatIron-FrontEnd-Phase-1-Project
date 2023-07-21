@@ -2,35 +2,55 @@
   "Plants": [
     {
       "name": "Pothos",
-      "days": "4",
-      "date": "7-20-2023",
+      "days": 1,
+      "lastdate": "7-21-2023",
       "img": "https://plantcareforbeginners.gumlet.io/images/articles/golden-pothos-in-bright-living-room.png?w=1200",
-      "info": "Hard to kill",
-      "id": 1
+      "info": "One of the best starter plants",
+      "id": 1,
+      "date": "7-20-2023"
     },
     {
       "name": "English Ivy",
-      "days": "6",
-      "date": "7-20-2023",
+      "days": 4,
+      "lastdate": "7-24-2023",
       "img": "https://assets.eflorist.com/site/48185077/assets/products/PHR_/sku10651710.jpg",
-      "info": "Hard to kill",
-      "id": 2
+      "info": "Very Invasive",
+      "id": 2,
+      "date": "7-20-2023"
     },
     {
       "name": "Snake Plant",
-      "days": "5",
-      "date": "7-19-2023",
+      "days": 2,
+      "lastdate": "7-22-2023",
       "img": "https://cb.scene7.com/is/image/Crate/SnakePlantInPotSHS18/$web_pdp_main_carousel_med$/220913134532/snake-plant-in-pot.jpg",
       "info": "Hard to kill",
-      "id": 3
+      "id": 3,
+      "date": "7-20-2023"
     },
     {
       "name": "Harry Potter",
-      "img": "",
+      "img": "https://cdn.shopify.com/s/files/1/0047/9730/0847/files/HzIsu_480x480.jpg?v=1600855282",
       "info": "The plant who lived",
-      "days": "3",
+      "days": 5,
+      "lastdate": "7-25-2023",
       "id": 4,
-      "date": "7-19-2023"
+      "date": "7-20-2023"
+    },
+    {
+      "name": "Groot",
+      "img": "https://esucculent.com/cdn/shop/products/Cute_Baby_Groot_Flower_Pots13_2000x.png?v=1619012548",
+      "info": "I am Groot",
+      "days": 1,
+      "id": 5,
+      "lastdate": "7-21-2023",
+      "date": "7-20-2023"
+    },
+    {
+      "name": "Bulbasaur",
+      "img": "https://archives.bulbagarden.net/media/upload/thumb/1/19/Ash_Bulbasaur.png/1200px-Ash_Bulbasaur.png",
+      "info": "Grass/Poison Type",
+      "days": 2,
+      "id": 6
     }
   ]
 }
