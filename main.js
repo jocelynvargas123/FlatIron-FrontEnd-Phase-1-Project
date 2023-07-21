@@ -8,43 +8,16 @@ document.addEventListener("DOMContentLoaded", (event) => {
 })
 
 
-
-// the current time
-  function startTime() {
-    const today = new Date();
-    let h = today.getHours();
-    let m = today.getMinutes();
-    let s = today.getSeconds();
-    m = checkTime(m);
-    s = checkTime(s);
-    let time =  document.getElementById('time')
-    time.innerHTML =  h + ":" + m + ":" + s;
-    setTimeout(startTime, 1000);
-  }
-
-  function checkTime(i) {
-    if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
-    return i;
-  }
-
-
 // getting the current date
-  let date = new Date();
+let date = new Date();
 
-  let day = date.getDate();
-  let month = date.getMonth() + 1;
-  let year = date.getFullYear();
+let day = date.getDate();
+let month = date.getMonth() + 1;
+let year = date.getFullYear();
 
-  let currentDate = `${month}-${day}-${year}`;
-  console.log(currentDate)
+let currentDate = `${month}-${day}-${year}`;
+console.log(currentDate)
 
-
-            
-// create new plant card
-const addPlantButton = document.querySelector('#addPlant')
-    addPlantButton.addEventListener('click', () => {
-    createPlantCard()
-})
 
 
 // creates plant card to keep information from json//
@@ -62,45 +35,44 @@ function createPlantCard(plant){
             img.classList.add('plant-photo')
 
         let p = document.createElement('p')
-            p.textContent = `Information: ${plant.info}`
+            p.textContent = plant.info
 
         let p2 = document.createElement('p')
-            p2.textContent = plant.date
+        p2.textContent =`Water on the ${plant.lastdate}`
+        if(plant.lastdate === undefined) { p2.textContent = "Time to Water"}
 
         let p3 = document.createElement('p')
-            p3.textContent = plant.days
-            p3.classList = "hidden"
+        p3.textContent =`Water every ${plant.days} days`
+        if(plant.days === 1) {p3.textContent = 'Water every day'}
 
         let btn = document.createElement('button')
             btn.classList.add('watering')
             btn.id = plant.id
-            btn.value = plant.days
-            btn.textContent = plant.days
             
+          if(currentDate === plant.lastdate || currentDate > plant.lastdate || plant.lastdate === undefined){
+              btn.textContent = "✿✿✿"
+          }else{
+              btn.textContent = "🌼🌼🌼"}
+
           btn.addEventListener('click', () => {
-            p2.textContent = currentDate
-            btn.textContent = p3.textContent
+              btn.textContent = "🌼🌼🌼"
+              p2.textContent = `Water on the ${month}-${day + plant.days}-${year}`
             patchPlants(btn.id,plant.days)
           })
-
+         
     card.append(h3,img,p,p2,p3,btn)
     document.getElementById('plantList').appendChild(card)
 }
 
-let btn1 = document.getElementById("plantList").getElementsByClassName('plantCard')
-console.log(btn1)
-
-
-
 
 // creates new plant card with user input information 
 // figure out how to default back to blank after submit without deleting my new cards
+
 const form = document.querySelector("form.plant-form")
 form.addEventListener("submit", (event) =>{
-  event.preventDefault()
   const formData = Object.fromEntries(new FormData(event.target))
-
   addNewPlant(formData)
+
 })
 
 
@@ -115,25 +87,28 @@ function addNewPlant(Plants){
         Accept: "application/json"
       },
   
-      body: JSON.stringify({...Plants })
+      body:  JSON.stringify({...Plants,
+        days: Number(Plants.days)
+      })
     })
     .then(res => res.json())
     .then(plants => createPlantCard(plants))
 }
 
+
+
 //Patching into json so that my changes to my plant card are forever!!!
 
-function patchPlants(id){
+function patchPlants(id,days){
   fetch(`http://localhost:3000/Plants/${id}`,{
     method: "PATCH",
     headers: {
       "Content-Type":"application/json",
       Accept: "application/json"
     },
-
     body: JSON.stringify({
-      date: currentDate
-      //patch days updating every 24 hours
+      date: currentDate,
+      lastdate : `${month}-${day + days}-${year}`
     })
     
   })
@@ -141,3 +116,31 @@ function patchPlants(id){
   .then((json) => console.log(json))
 }
 
+let slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
