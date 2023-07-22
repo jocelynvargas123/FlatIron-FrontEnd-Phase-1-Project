@@ -3,11 +3,11 @@
     {
       "name": "Pothos",
       "days": 1,
-      "lastdate": "7-21-2023",
+      "lastdate": "7-23-2023",
       "img": "https://plantcareforbeginners.gumlet.io/images/articles/golden-pothos-in-bright-living-room.png?w=1200",
       "info": "One of the best starter plants",
       "id": 1,
-      "date": "7-20-2023"
+      "date": "7-22-2023"
     },
     {
       "name": "English Ivy",
@@ -50,7 +50,9 @@
       "img": "https://archives.bulbagarden.net/media/upload/thumb/1/19/Ash_Bulbasaur.png/1200px-Ash_Bulbasaur.png",
       "info": "Grass/Poison Type",
       "days": 2,
-      "id": 6
+      "id": 6,
+      "date": "7-22-2023",
+      "lastdate": "7-24-2023"
     }
   ]
 }
