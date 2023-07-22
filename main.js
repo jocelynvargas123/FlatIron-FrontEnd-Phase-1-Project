@@ -1,11 +1,27 @@
 // fetch 
+
 document.addEventListener("DOMContentLoaded", (event) => {
     event.preventDefault()
     fetch('http://localhost:3000/Plants') 
     .then(res => res.json())
     .then(plantInfo => plantInfo.forEach(plant => createPlantCard(plant)))
+  
+    
     
 })
+
+//making my seeds turn to flowers when i mouse over the title
+
+let seeds = document.getElementById('seeds')
+
+seeds.addEventListener("mouseenter", (e) =>{
+  e.target.textContent = "🌷  🌷  🌷  🌷  🌷"
+
+  setTimeout(() => {
+    e.target.textContent = "🌱  🌱  🌱  🌱  🌱"
+  }, 3000)
+})
+
 
 
 // getting the current date
