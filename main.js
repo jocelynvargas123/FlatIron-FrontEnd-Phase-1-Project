@@ -42,6 +42,10 @@ function createPlantCard(plant){
         card.id = "plantCard"
         card.classList.add('plantCard')
 
+        let xBtn = document.createElement('button')
+            xBtn.textContent = "X"
+            xBtn.classList.add('x')
+
         let h3 = document.createElement('h3')
             h3.textContent = `Plant name: ${plant.name} `
 
@@ -76,7 +80,7 @@ function createPlantCard(plant){
             patchPlants(btn.id,plant.days)
           })
          
-    card.append(h3,img,p,p2,p3,btn)
+    card.append(xBtn,h3,img,p,p2,p3,btn)
     document.getElementById('plantList').appendChild(card)
 }
 
@@ -160,3 +164,44 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
 }
+
+let plantTip1 = document.getElementById('1Plant')
+let myTipA = document.getElementById('aTip')
+plantTip1.addEventListener("click", ()=>{
+  myTipA.classList.replace('myTips','clicked')
+  setTimeout(() =>{
+    myTipA.classList.replace('clicked','myTips')
+  },5000)
+})
+
+let plantTip2 = document.getElementById('2Plant')
+let myTipB = document.getElementById('bTip')
+plantTip2.addEventListener("click", ()=>{
+  myTipB.classList.replace('myTips','clicked')
+  setTimeout(() =>{
+    myTipB.classList.replace('clicked','myTips')
+  },5000)
+})
+
+let plantTip3 = document.getElementById('3Plant')
+let myTipC = document.getElementById('cTip')
+plantTip3.addEventListener("click", ()=>{
+  myTipC.classList.replace('myTips','clicked')
+  setTimeout(() =>{
+    myTipC.classList.replace('clicked','myTips')
+  },5000)
+})
+
+let plantTip4 = document.getElementById('4Plant')
+let myTipD = document.getElementById('dTip')
+plantTip4.addEventListener("click", ()=>{
+  myTipD.classList.replace('myTips','clicked')
+  setTimeout(() =>{
+    myTipD.classList.replace('clicked','myTips')
+  },5000)
+})
+
+
+
+
+
