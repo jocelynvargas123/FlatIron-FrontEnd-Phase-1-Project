@@ -17,12 +17,13 @@ body{
 
 .container{
     text-align: center;
-    background-image: linear-gradient(180deg, #98c1d9, #b2d97f);
+
     color: white;
 }
 
 .container h2{
-    background-color: #98c1d9ac;
+    background-image: linear-gradient(180deg,#6fa9caac, #c2f0f671);
+    background-color: rgb(175, 227, 253);
     padding: 70px;
     font-size: 30pt;
     color: rgb(255, 255, 255);
@@ -71,7 +72,6 @@ body{
 
 .search-form h2 {
     font-size: 25pt;
-    font-weight: 800;
     color: #3d5a80;
 }
 label{
@@ -94,23 +94,37 @@ select {
 }
 #plantList {
     text-align: center;
+    display: inline-block;
 }
 
 #plantList h2{
     padding-top: 30pt;
     font-size: 35pt;
-    font-weight: 800;
     color: #033f63;
     background-color: #98c1d9bc;
     padding: auto;
     text-align: center;
 }
-
+.x {
+    color: white;
+    font-size: 15pt;
+    font-weight: 600;
+    position: relative;
+    float: right;
+    padding: 1pt;
+    border: none
+}
+.x:after{
+    display: none;
+}
 .plantCard h3{
-    
+    float: right;
+    position: relative;
+    text-align: center;
+    width: 18rem;
     font-size: 18pt;
     font-family: Arial, Helvetica, sans-serif;
-    color: #66816f;
+    color: #445a4b;
 }
 
 .plantCard img{
@@ -120,28 +134,34 @@ select {
 }
 
 .plantCard p {
+    background-image: linear-gradient(150deg, #8eb29afe, #b2d97f09);
+    border-radius: 5pt;
     color: rgb(255, 255, 255);
     padding-left: 5pt;
-    font-size: larger;
+    font-size: 15pt;
     font-weight: 500;
     text-align: left;
 }
 
 .plantCard{
+    border-color: white;
+    border-width: 3pt;
+    border-style: outset;
+    background-color: #94b49f89;
     position: relative;
     display: inline-block ;
     width: 20rem;
+    height: auto;
     margin: 10px;
-    background-color:#7c988568 ;
+    
     padding: 1rem;
     border-radius: 10pt;
     text-align: center;
     
-
 }
 
 
-.plantCard button {
+button {
     font-size: 16px;
     font-weight: 200;
     letter-spacing: 1px;
@@ -156,7 +176,7 @@ select {
     touch-action: manipulation;
 }
   
-.plantCard button:after {
+button:after {
     content: "";
     background-color: #ffe54c;
     width: 100%;
@@ -168,7 +188,7 @@ select {
     transition: 0.2s;
 }
   
-.plantCard button:hover:after {
+button:hover:after {
     top: 0px;
     left: 0px;
 }
@@ -183,7 +203,6 @@ select {
 
 #gallery h2{
     font-size: 35pt;
-    font-weight: 800;
     color: #033f63;
     background-color: #98c1d9bc;
     padding-top: 30pt;
@@ -223,7 +242,7 @@ select {
 }
   
   /* Caption text */
-  .text {
+.text {
     background-color: #bbbbbb85;
     color: #66816f;
     font-size: 35px;
@@ -234,8 +253,8 @@ select {
     width: 100%;
     text-align: right;
     overflow-x: hidden;
-  }
-  .slideshow-container p{
+}
+.slideshow-container p{
     overflow: hidden;
     font-size: 22pt;
     font-style: italic;
@@ -244,20 +263,20 @@ select {
     right:20px;
     width: 100%;
     text-align: center;
-  }
+}
   
-  /* Number text (1/3 etc) */
-  .numbertext {
+/* Number text (1/3 etc) */
+.numbertext {
     color: #f2f2f2;
     font-size: 12px;
     padding: 8px 12px;
     position: absolute;
     bottom: 2px;
     background-color: #98c1d969;
-  }
+}
   
-  /* The dots/bullets/indicators */
-  .dot {
+/* The dots/bullets/indicators */
+.dot {
     cursor: pointer;
     height: 15px;
     width: 15px;
@@ -266,26 +285,51 @@ select {
     border-radius: 50%;
     display: inline-block;
     transition: background-color 0.6s ease;
-  }
+}
   
-  .active, .dot:hover {
+.active, .dot:hover {
     background-color: #20334a;
-  }
+}
   
-  /* Fading animation */
-  .fade {
-    animation-name: fade;
-    animation-duration: 1.5s;
-  }
 
-  #tips h2{
+#tipSection h2{
 
     font-size: 35pt;
-    font-weight: 800;
     color: #033f63;
     background-color: #98c1d9bc;
     padding-top: 30pt;
     text-align: center;
 
-  }
-  
+}
+#tipSection{
+    position: relative;
+    text-align: center;
+
+}
+
+#tipList{
+    align-items: center;
+    padding-top: 10%;
+    padding-bottom: 10%;
+}
+
+
+
+.myTips{
+    list-style-type: none;
+    font-size: 10px;
+    color: #20334a4e;
+
+}
+.clicked{
+    width: 90%;
+    list-style-type: none;
+    font-size: 40px;
+    font-weight: 800;
+    color: black;
+}
+
+footer{
+    color: #98c1d9;
+    padding-top: 100pt;
+}
