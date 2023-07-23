@@ -333,3 +333,8 @@ footer{
     color: #98c1d9;
     padding-top: 100pt;
 }
+
+.plantTips:after{
+    background-color: #daee439b;
+    
+}
