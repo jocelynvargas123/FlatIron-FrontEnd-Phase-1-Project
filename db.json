@@ -3,11 +3,11 @@
     {
       "name": "Pothos",
       "days": 1,
-      "lastdate": "7-23-2023",
+      "lastdate": "7-24-2023",
       "img": "https://plantcareforbeginners.gumlet.io/images/articles/golden-pothos-in-bright-living-room.png?w=1200",
       "info": "One of the best starter plants",
       "id": 1,
-      "date": "7-22-2023"
+      "date": "7-23-2023"
     },
     {
       "name": "English Ivy",
@@ -21,11 +21,11 @@
     {
       "name": "Snake Plant",
       "days": 2,
-      "lastdate": "7-24-2023",
+      "lastdate": "7-25-2023",
       "img": "https://cb.scene7.com/is/image/Crate/SnakePlantInPotSHS18/$web_pdp_main_carousel_med$/220913134532/snake-plant-in-pot.jpg",
       "info": "Hard to kill",
       "id": 3,
-      "date": "7-22-2023"
+      "date": "7-23-2023"
     },
     {
       "name": "Harry Potter",
@@ -42,8 +42,8 @@
       "info": "I am Groot",
       "days": 1,
       "id": 5,
-      "lastdate": "7-21-2023",
-      "date": "7-20-2023"
+      "lastdate": "7-24-2023",
+      "date": "7-23-2023"
     },
     {
       "name": "Bulbasaur",
@@ -51,8 +51,17 @@
       "info": "Grass/Poison Type",
       "days": 2,
       "id": 6,
-      "date": "7-22-2023",
-      "lastdate": "7-24-2023"
+      "date": "7-21-2023",
+      "lastdate": "7-23-2023"
+    },
+    {
+      "name": "Bob",
+      "img": "",
+      "info": "Happy",
+      "days": 2,
+      "id": 7,
+      "date": "7-23-2023",
+      "lastdate": "7-25-2023"
     }
   ]
 }

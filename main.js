@@ -86,10 +86,12 @@ function createPlantCard(plant){
 
 
 // creates new plant card with user input information 
-// figure out how to default back to blank after submit without deleting my new cards
+//Add plant button
+
 
 const form = document.querySelector("form.plant-form")
 form.addEventListener("submit", (event) =>{
+  event.preventDefault()
   const formData = Object.fromEntries(new FormData(event.target))
   addNewPlant(formData)
 
@@ -136,6 +138,9 @@ function patchPlants(id,days){
   .then((json) => console.log(json))
 }
 
+
+
+
 let slideIndex = 1;
 showSlides(slideIndex);
 
@@ -149,6 +154,7 @@ function currentSlide(n) {
   showSlides(slideIndex = n);
 }
 
+//gallery of plant photos
 function showSlides(n) {
   let i;
   let slides = document.getElementsByClassName("mySlides");
@@ -164,6 +170,8 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
 }
+
+//tips section
 
 let plantTip1 = document.getElementById('1Plant')
 let myTipA = document.getElementById('aTip')
